@@ -1,15 +1,28 @@
 <script>
-var rows = 4;
-var columns = 5;
 
-function Create2DArray(rows,columns) {
-   var x = new Array(rows);
-   for (var i = 0; i < rows; i++) {
-       x[i] = new Array(columns);
-   }
-   return x;
-} 
-var array = Create2DArray(2,3);
+    function Create2DArray(rows,columns) {
+        var x = new Array(rows);
+        for (var i = 0 ; i < rows ; i++) {
+            x[i] = new Array(columns);
+        }
+        return x;
+     } 
 
+
+
+     // Test 2Darray
+
+     var rows = 4;
+     var columns = 5;
+
+     var array = Create2DArray(rows, columns);
+
+     for(var i = 0 ; i < rows; i++){
+             for(var j = 0 ; j < columns ; j++){
+             array[i][j] = (i + 1) * j;
+             document.write("i:" + i + ", j:" + j + ", arr[" + i + "][" + j + "]:=====" + array[i][j] + "<br>");
+
+         }
+     }
 
 </script>
